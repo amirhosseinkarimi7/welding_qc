@@ -13,8 +13,7 @@ ui <- fluidPage(
       h4("Uploaded Image:"),
       imageOutput("uploaded_image"),
       h4("Prediction Results:"),
-      textOutput("class_name"),
-      textOutput("score")
+      tableOutput("prediction_table")
     )
   )
 )
