@@ -28,21 +28,21 @@ server <- function(input, output) {
                          "2" = 'Spatter',
                          "3" = 'overlap')
     
-    score1 <- round(prediction[class_indecies[3]], digits = 3) + 0.25
+    score1 <- round(prediction[class_indecies[3]], digits = 3)
     
     class_name2 <- switch(class_indecies[2],
                           "1" = 'Okey',
                           "2" = 'Spatter',
                           "3" = 'overlap')
     
-    score2 <- round(prediction[class_indecies[2]], digits = 3) - 0.125
+    score2 <- round(prediction[class_indecies[2]], digits = 3)
 
     class_name3 <- switch(class_indecies[1],
                           "1" = 'Okey',
                           "2" = 'Spatter',
                           "3" = 'overlap')
     
-    score3 <- round(prediction[class_indecies[1]], digits = 3) - 0.125
+    score3 <- round(prediction[class_indecies[1]], digits = 3)
     
     predictions_df <- data.frame(
       Class = c(class_name1, class_name2, class_name3),
